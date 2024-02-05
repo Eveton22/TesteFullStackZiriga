@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        *{
+            
+
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .imagem-logo {
+            padding-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            background-image: url('https://www.denea.com.br/stores/784/static/img/wave-pink.png');
+            background-repeat: no-repeat;
+            background-size: cover ;
+            background-size: 2400px 960px;
+            width: 100%px;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding-top: 80px;
+            gap: 160px;
+        }
+
+        .container-text {
+            top: 200px;
+            left: 220px;
+            position: relative;
+            width: 700px;
+            height: 800px;
+        }
+
+        .container-text h2{
+            font-size: 50px;
+        }
+
+        .container-form {
+            padding-top: 170px;
+            width: 750px;
+            height: 800px;
+        }
+
+        .container-form .input-nome , .input-email{
+            padding: 1.0rem;
+            font-size: 20px;
+            width: 360px;
+            border-radius: 16px;
+            outline: 0;
+        }
+
+        .container-form form {
+            padding-block: 50px;
+        }
+
+        .container-form div {
+            padding-bottom: 20px;
+        }
+
+        div .input-botton {
+            width: 40px;
+        }
+
+        .input-button {
+            padding-top: 10px;
+        }
+
+        .input-button:hover {
+            background-color: rgb(232, 26, 173);
+        }
+        .input-button input {
+            border-radius: 0.5rem;
+            width: 250px;
+            height: 40px;
+            cursor: pointer;
+            background-color: #000;
+            color: #ffff;
+            font-size: 20px;
+        }
+
+        /* ---------FOOTER -----*/
+
+        .footer {
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body style="background-image: url('https://www.denea.com.br/stores/784/static/img/back_image.png');">
+    <div class="imagem-logo">
+        <img src="https://www.denea.com.br/stores/784/static/img/logo-black-large.png" alt="">
+    </div>
+    <div class="container">
+        <div class="container-text">
+            <div>
+                <h1>BEM VINDO Á D.ENE.A</h1>
+                <h3>Cosmeticos Profissionais</h2>
+            </div>
+            <div>
+                <p>Em breve, você terá acesso a uma game exclusica</p>
+                <p>de produtos que cuidam da integridade, sa´ude e</p>
+                <p>regeneração dos cabelos./p>
+            </div>
+        </div>
+
+        <img src="produtos.png" alt="" width="560px">
+        
+        <div class="container-form">
+                <p>Preencha o formulario a baixo com o seu nome e</p><br />
+                <p>e-email para receber novidades e aproveitar um</p><br />
+                <p><strong>Desconto especial na sua primeira compra!</strong></p>
+
+                <form action="">
+
+                    <div>
+                        <label for=""><h3>SEU NOME:</h3></label>
+                        <input  name="nome"class="input-nome" type="text" placeholder="Nome">
+                    </div>
+                    <div>
+                        <label for=""><h3>SEU E-EMAIL:</h3></label>
+                        <input name="email" class="input-email" type="email" placeholder='E-mail'>
+                    </div>
+                    <div class="input-button">
+                        <input  type="submit" value="QUERO ME INSCREVER" />
+                    </div>
+                </form>
+
+
+
+        </div>
+    </div>
+    <div class="footer">
+        <footer>
+            <p><strong>Profissional </strong>como você sempre quis, <strong>acessivel</strong> como você nunca viu.</p><br />
+            <p>O melhor está for vim, aguarde!</p>
+        </footer>
+    </div>
+    <div>
+
+    </div>
+</body>
+</html>
