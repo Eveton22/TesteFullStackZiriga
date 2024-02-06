@@ -13,7 +13,7 @@
 
     <div class="benner vh-100"  >
         <div style=" padding-top: 60px; display: flex; justify-content:center; aling-items:center;">
-            <div  style="display-flex; justify-content: center;">
+            <div class="mb-3"  style="display-flex; justify-content: center;">
                 <img  class="logo"src="https://www.denea.com.br/stores/784/static/img/logo-black-large.png" alt="">
             </div>
         </div>
@@ -30,16 +30,13 @@
                
             </div>
         </div>
-        <div class="row p-0 m-0" style="width: 100%">
-            <div class="col-12 d-flex justify-content-center ">
-                    <strong>Profissional</strong><p>como você sempre quis,</p>
-                    <strong>acessível</strong>
-                    <p>como você nunca viu.</p>
-                </div>
-                <div class="d-flex justify-content-center" >
-                    <p class="d-none d-md-flex link-underline-dark">O melhor está por vir, aguarde!</p>
+        <div class="row p-0 m-0 w-100">
+            <div class="col-12 text-center">
+                    <p><strong>Profissional</strong> como você sempre quis,<strong>acessível</strong> como você nunca viu.
+                    <p class="" style="position: relative; top:-20px">O melhor está por vir, aguarde!</p>
                 </div>
             </div>
+        
     </div>
 
 
