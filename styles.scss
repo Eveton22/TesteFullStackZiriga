@@ -1,0 +1,140 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('/projetonovo/assets/fundoPrincipal.png');
+
+
+    .container-todos {
+
+        .todoselementos {
+            width: 100%;
+            padding-right: 80px;
+            padding-left: 80px;
+        }
+        .imglogo {
+            padding-top: 6rem;
+        }
+
+        .div01 {
+            display: flex;
+            justify-content: center;
+        }
+
+        .elementos {
+            padding-top: 30px;
+            display: flex;
+            justify-content: center;
+
+            
+            .box-elementos {
+                width: auto;
+                box-shadow: 10px gray;
+                 background-image: url('assets/fundoRosa.png');
+                 background-repeat: no-repeat;
+                 background-size: 1280px 480px;
+            }
+
+            
+        
+        }
+
+        .todoselementos{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 4rem;
+
+            .div1 {
+                margin-top: 45px;
+            }
+
+            .div2 {
+                img {
+                    margin-top: 40px;
+                    width: auto;
+                    height: auto;
+                }
+            }
+
+            .div-form{
+                
+                position: relative;
+                bottom: 40px;
+                span{
+                    font-weight: bold;
+                }
+                form{
+                    label {
+                        font-weight: bold;
+                        padding-block: 0.2rem;
+                    }
+                    button {
+                        padding: 1em;
+                        font-weight: bold;
+                    }
+                    button:hover {
+                        font-weight: bold;
+                        background-color: rgb(237, 111, 153);
+                        color: #ffff;
+                    }
+
+                    input {
+                        padding: 16px;
+                    }
+
+                    .input2 {
+                        margin-bottom: 29px;
+                    }
+
+                    .btn input{
+                        background-color: rgb(36, 36, 36);
+                        transition: 0.5s;
+                    }
+                    .btn input:hover{
+                        background-color: rgb(233, 86, 198)
+                    }
+
+                }
+            }
+        }
+
+        .footer {
+            text-align: center;
+            position: relative;
+            bottom: 2rem;
+
+            .p{
+                position: relative;
+                bottom: 20px;
+            }
+            span {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 990px) {
+
+    .di1{
+        margin-top: 20px;
+    }
+    
+    .todoselementos {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .div-form {
+        padding-top: 40px;
+        
+        .btn input{
+            width: 380px;
+        }
+        
+    }
+
+    
+}
+

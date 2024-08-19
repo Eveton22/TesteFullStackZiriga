@@ -1,0 +1,81 @@
+<?php
+
+    if(isset($_POST['enviar']))
+    {
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+
+        try{
+            $pdo = new PDO('mysql:dbname=testeziriga;host=localhost',  'root', 'root');
+            echo "Conectado com Sucesso Parabens";
+        
+        } catch(PDOException $erro) {
+            echo 'Erro com bancos de Dados: '.$erro->getMessage();
+        }
+
+        $resultado = $pdo->prepare("INSERT INTO customers (nome, email) VALUES (:nome, :email)");
+        $resultado->bindparam('nome', $nome);
+        $resultado->bindparam('email', $email);
+        $resultado->execute();
+
+        header("Location: logado.php");
+    }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denea Cosméticos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.scss">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="container-todos">
+            <div class="d-flex justify-content-center imglogo">
+                <img src="assets/logoPrincipal.png" alt="">
+            </div>
+            <div class="div01">
+                <div class="elementos">
+                    <div class="box-elementos shadow-lg p-3 mb-5">
+                        <div class="todoselementos">
+                            <div class="div1">
+                                <h1>BEM VINDO À D.ENEA</h1>
+                                <h4>Cosmesticos Profissionais</h3>
+            
+                                <span>Em breve, você terá acesso a uma gama exclusiva de<br /> produtos que cuidam da integridade, saúde e regeneração<br /> dos seus cabelos.</span>
+                            </div>
+                            <div class="div2">
+                                <img src="assets/produtos.png" alt="">
+                            </div>
+                            <div class="div-form">
+                                <p>Preencha o formulário abaixo com o seu nome<br /> e e-mail para receber novidades e aproveitar<br />
+                                um <span>desconto especial na sua primeira compra!</span></p>
+                                <form action="" method="POST">
+                                    <div>
+                                        <label for="">SEU NOME</label> 
+                                        <input class="input form-control" type="text" name="nome" placeholder="Nome">
+                                    </div>
+                                    <div class="input2">
+                                        <label for="">SEU E-MAIL</label> 
+                                        <input class="input form-control" type="email" name="email" placeholder="E-mail">
+                                    </div>
+                                    <div class="btn">
+                                        <input name="enviar" type="submit" value="QUERO ME INSCREVER" href="./logado.html" class="btn btn-dna text-white mt-3 fw-bold" />
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <div class="footer">
+                <p><span>Profissional</span> como você sempre quis, <span>acessível</span> como você nunca viu.</p>
+                <p class="p"> O melhor está por vir, aguarde!</p>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
